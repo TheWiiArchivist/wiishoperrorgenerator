@@ -15,7 +15,7 @@ body {
   text-align:center;
   width:100%;
   height:100vh;
-  overflow:hidden;
+  overflow-y:hidden;
   background: rgb(253,254,255);
 }
 
@@ -115,6 +115,7 @@ transition:0s;
 #errorcodebox {
   margin-left:auto; margin-right:auto; margin-top:-30px;
   float:left;
+  min-height:420px;
   height:420px;
   max-height:420px; max-width:676px;
   background-color:white;  
@@ -143,12 +144,12 @@ transition:0s;
   max-height:422px;
 }
 #extradotsonborderstop {
-  position:relative;
+  position:absolute;
   top:40px;
 }
 #extradotsonbordersbottom {
-  position:relative;
-  top:304px;
+  position:absolute;
+  top:303px;
 }
 body {
   background-color:#e6f8ff;
@@ -165,17 +166,21 @@ body {
   color:#ACACAC;
   font-weight:normal;
   font-size:18px;
+  height: 23px;
 }
 #dotontop {
   text-align:left;
+  height: 23px;
   overflow:hidden;
-  height:20px;
+  position:absolute;
+  top:40px;
 }
 #dotonbottom {
   text-align:left;
   overflow:hidden;
-  height:20px;
-  margin-top:150px;
+  height: 23px;
+  position:absolute;
+  top:303px;
 }
 
 .warningRed {
@@ -186,12 +191,16 @@ font-size: 22px;
 display:block;
 text-align:left;
 margin-left:50px;
+position:relative;
+top:15px;
 }
 #error-text {
 display:block;
 font-size:16px;
 text-align:left;
 margin-left:50px;
+position:relative;
+top:5px;
 }
 #errortextfirstline {
 min-height:28px;
