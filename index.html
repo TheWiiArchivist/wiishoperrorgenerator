@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    @font-face {
+  font-family: 'Wii NTLG PGothic JPN Regular';
+    /* wii shop font from: https://github.com/amarillonmc/MSE201_w_ygos10/blob/master/font/ZENTemplate/FOT-Rodin%20Pro%20M.ttf */
+    /* the closest font to wii shops font in google fonts is Noto Sans JP */
+  src: url(/font/FOT-Rodin\ Pro\ M.ttf);
+}
+  </style>
+  <!-- inspired by https://limes.pink/errors -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Wii Shop errors - ChrisplayzWii</title>
+  <link rel="shortcut icon" href="/chris.png" type="image/x-icon">
+  <meta name="author" content="ChrisplayzWii">
+  <meta property="og:image" content="/chris.png" />
+  <meta property="og:image:width" content="80" />
+  <meta property="og:image:height" content="80" />  
+  <meta name="description" content="ChrisplayzWii's Wii Shop Channel fake Error Code generator, generate a error then screenshot it!">
+  <meta name="keywords" content="ChrisplayzWii's website, ChrisplayzBLOX, ChrisplayzYT, Wii Shop error generator, Wii Shop Channel fake error generator, Wii Shop fake error generator">
+  <link rel="stylesheet" href="/wiishoperrorgenerator/shoperrors.css">
+  <script src="/wiishoperrorgenerator/shoperrors.js"></script>
+  <link rel="stylesheet" href="/wiishopscrollbar/wiiscrollbar.css">
+    <!-- inspired by https://limes.pink/errors -->
+
+     <!-- for the screenshot the erorr button -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div id="makeone"  style="display:block;">
+<form action="javascript:showerrorz();" id="errorcodes" style="margin-top:60px;">
+  <h1 style="color:#34BEED; font-weight:bold; font-size:18px;">Wii Shop Channel error page generator</h1>
+  <hr style="margin-bottom:8px;">
+  <label for="ErrorCodenumber" style="color:#323232;">Enter the error code here:</label>
+  <br>
+  <input type="text" name="ErrorCodenumber" id="ErrorCodenumber" required>
+  <br>
+  <label for="ErrorCodenumber" style="color:#323232;">Enter the error code's description here:</label>
+  <br>
+  <input type="text" name="ErrorCodeinformation" id="ErrorCodeinformation" required style="margin:auto; display:block; margin-bottom:10px;">
+  <input type="submit" id="btnstyle" value="Show error page">
+  <hr>
+  <p style="color:#3232329d; font-size:11px;">(click the Visit support.nintendo.com... text to change it from "for assistance if this continues." to just "for assistance.")</p>
+  <br>
+  <p style="color:#3232329d; font-size:11px;">(website inspired by <a href="https://limes.pink/errors" target="_blank" style="color:#34BEED;">https://limes.pink/errors</a>)</p>
+</form>
+</div>
+
+<script>
+  function showerrorz() {
+    var points = new Audio("/sound/wiishopsounds/7.wav");
+    points.play();
+
+// generate da error
+    document.getElementById("makeone").style.display="none";
+    document.getElementById("errorcodebox").style.display="block";
+
+    var errorcode = document.getElementById("ErrorCodenumber").value;
+    document.getElementById("errorcode-numbers").innerText = errorcode;
+    var errorcodeinfo = document.getElementById("ErrorCodeinformation").value;
+    document.getElementById("errortextfirstline").innerText = errorcodeinfo;
+    setTimeout(2000,reload);
+  }
+  function switch1() {
+    document.getElementById("changr").href="javascript:switch2();";
+    document.getElementById("errortextsecondline").innerText="Visit support.nintendo.com for assistance.";
+    var changenintendonotice = new Audio("/sound/wiishopsounds/5.wav");
+    changenintendonotice.play();
+  }
+  function switch2() {
+    document.getElementById("changr").href="javascript:switch1();";
+    document.getElementById("errortextsecondline").innerText="Visit support.nintendo.com for assistance if this continues.";
+    var changenintendonotice = new Audio("/sound/wiishopsounds/5.wav");
+    changenintendonotice.play();
+  }
+  function reload() {
+   window.location.href="https://chrisplayzyt.github.io/wiishoperrorgenerator/index.html";
+  }
+
+// screenshot the error code page using html2canvas
+  function screenshoterror() {
+      
+  var screenie = new Audio("/sound/wiishopsounds/12.wav");
+  screenie.play();
+let captureElement = document.getElementById("errorcodebox");
+
+html2canvas(captureElement).then(canvas => {
+    let errorphoto = canvas.toDataURL("image/png");
+    let downloaderror = document.createElement("a");
+    downloaderror.href = errorphoto;
+    downloaderror.download = "wiishoperrorgenerator.png";
+    downloaderror.click();
+});
+
+alert("Downloaded the fake wii shop error as a PNG. Happy shopping!");
+document.getElementById("screenshottheerror").innerText="Downloaded";
+document.getElementById("screenshotbuttonhref").href="javascript:screeniecooldown();";
+  }
+  function screeniecooldown() {
+    var screenieerror = new Audio("/sound/wiishopsounds/8.wav");
+    screenieerror.play();
+    alert("Reload the page and make a new error to download another screenshot.");
+  }
+</script>
+
+<br>
+
+<div id="errorcodebox" style="display:none;">
+
+<!-- error code generated -->
+<div id="errorcodepagethatusermade">
+  <div id="border01">
+    <p id="extradotsonborderstop" class="dot">･････････</p>
+  <p id="extradotsonbordersbottom" class="dot">･････････</p>
+  </div>
+  <div id="border02">
+    <p id="extradotsonborderstop" class="dot">･･･････････</p>
+  <p id="extradotsonbordersbottom" class="dot">･･･････････</p>
+  </div>
+  
+    <p id="shoptitle">Wii Shop Channel</p>
+<p id="dotontop" class="dot">･･･････････････････････････････････････････････････････････････････････････</p>
+  
+  <div class="warningRed" id="error-code">
+    Error Code: <span id="errorcode-numbers">206601</span>
+  </div>    
+  
+  <div class="warningRed" id="error-text">
+    <div id="errortextfirstline">
+      An error has occured that cannot be resolved at this time. Please try again later.
+    </div>
+  
+    <br><br>
+    <a href="javascript:switch1();" id="changr" >
+    <div id="errortextsecondline"  style="cursor:pointer;">
+      Visit support.nintendo.com for assistance if this continues.
+    </div>
+  </a>
+  
+</div>
+
+<p id="dotonbottom" class="dot">･･･････････････････････････････････････････････････････････････････････････</p>
+</div> 
+
+<!-- take a screenshot -->
+<hr style="margin-top:80px;">
+<a href="javascript:screenshoterror();" id="screenshotbuttonhref">
+<button id="screenshottheerror"  style="opacity:100%;  display:inline-block;">screenshot the error</button>
+</a>
+
+<button onclick="window.location.reload();" style="opacity:100%; display:inline-block;">Reload</button>
+
+<p style="color:#3232329d; font-size:11px;">(website inspired by <a href="https://limes.pink/errors" target="_blank" style="color:#34BEED;">https://limes.pink/errors</a>)</p>
+
+<p style="color:#3232329d; font-size:11px;">(if your on mobile, to view/download your error, press the screenshot button above.)</p>
+<hr>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,211 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Wii NTLG PGothic JPN Regular';
+}
+
+@font-face {
+font-family: 'Wii NTLG PGothic JPN Regular';
+/* wii shop font from: https://github.com/amarillonmc/MSE201_w_ygos10/blob/master/font/ZENTemplate/FOT-Rodin%20Pro%20M.ttf */
+/* the closest font to wii shops font in google fonts is Noto Sans JP */
+src: url(/font/FOT-Rodin\ Pro\ M.ttf);
+}
+body {
+  text-align:center;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  background: rgb(253,254,255);
+}
+
+/* wii shop type button made by ChrisplayzWii.
+ smalltext,mediumtext,largetext, were made by me peeking at the wii shop css,
+  its just font sizes!1!1 i didnt steal!!! 
+ */
+ button {
+  text-align: center;
+  padding: 3px 5px;
+transition:0s;
+  border-radius: 5px;
+  border: 1.3px solid #34beed;
+  background-color:#f6fdff;
+  filter: drop-shadow(1px 1px 3.4px #c5c5c5);
+  box-shadow:inset 1px 1px 12px #54545415;
+  font-size:18px;
+}
+
+button:hover {
+  transition:0s;
+  border:2px solid #34beed;
+  outline:1.5px solid #34bEED;
+  cursor: url('/wiicursor.png'), pointer;
+}
+/*forthese, add class="BTN___text" to your button */
+.BTNsmalltext {
+  font-size: 14px;
+}
+.BTNmediumtext {
+  font-weight:normal;
+  font-size: 18px;
+}
+.BTNlargetext {
+  font-weight:normal;
+  font-size: 22px;
+}
+/* wii shop type button made by ChrisplayzWii.
+smalltext,mediumtext,largetext, were made by me peeking at the wii shop css,
+its just font sizes!1!1 i didnt steal!!! 
+*/
+
+
+
+hr {
+  border-top: 1px solid #34BEED;
+  border-bottom: 1px solid #34BEED;
+  border-left: 80px solid #b6edff;
+  border-right: 80px solid #b6edff;
+  margin:auto;
+  max-width:70%;
+  margin-top:8px; margin-bottom:8px;
+}
+
+
+/* generator page */
+input {
+  border-top-width: 2px;
+border-right-width: 2px;
+border-bottom-width: 2px;
+border-left-width: 2px;
+border-top-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-top-color: #CCCCCC;
+border-right-color: #CCCCCC;
+border-bottom-color: #EAEAEA;
+border-left-color: #CCCCCC;	
+}
+
+a {
+  text-decoration:none;
+  color:#FF0000;
+}
+
+#btnstyle {
+  text-align: center;
+  padding: 3px 5px;
+transition:0s;
+  border-radius: 5px;
+  border: 1.3px solid #34beed;
+  background-color:#f6fdff;
+  filter: drop-shadow(1px 1px 3.4px #c5c5c5);
+  box-shadow:inset 1px 1px 12px #54545415;
+  font-size:18px;
+}
+
+#btnstyle:hover {
+  transition:0s;
+  border:2px solid #34beed;
+  outline:1.5px solid #34bEED;
+  cursor: url('/wiicursor.png'), pointer;
+}
+
+/* error code box */
+#errorcodebox {
+  margin-left:auto; margin-right:auto; margin-top:-30px;
+  float:left;
+  height:420px;
+  max-height:420px; max-width:676px;
+  background-color:white;  
+  width:676px; 
+  /* for blue borders */ 
+  padding-left:80px; padding-right:80px;
+}
+#border01 {
+  background-image:url("/wiishoperrorgenerator/borderblue_left.png");
+  background-size:cover;
+  position:absolute;
+  top:0;
+  left:0;
+  width:82px;
+  height: 422px;
+  max-height:422px;
+}
+#border02 {
+  background-image:url("/wiishoperrorgenerator/borderblue_right.png");
+  background-size:cover;
+  position:absolute;
+  top:0;
+  left:592px;
+  width:100px;
+  height: 422px;
+  max-height:422px;
+}
+#extradotsonborderstop {
+  position:relative;
+  top:40px;
+}
+#extradotsonbordersbottom {
+  position:relative;
+  top:304px;
+}
+body {
+  background-color:#e6f8ff;
+}
+#shoptitle {
+  text-align:left;
+  font-weight:normal;
+  font-size:30px;
+  margin-left:15px;
+  height:38px;
+  color:#34BEED;
+}
+.dot  {
+  color:#ACACAC;
+  font-weight:normal;
+  font-size:18px;
+}
+#dotontop {
+  text-align:left;
+  overflow:hidden;
+  height:20px;
+}
+#dotonbottom {
+  text-align:left;
+  overflow:hidden;
+  height:20px;
+  margin-top:150px;
+}
+
+.warningRed {
+color: #FF0000;
+}
+#error-code {
+font-size: 22px;
+display:block;
+text-align:left;
+margin-left:50px;
+}
+#error-text {
+display:block;
+font-size:16px;
+text-align:left;
+margin-left:50px;
+}
+#errortextfirstline {
+min-height:28px;
+height:28px;
+max-height:28px;
+margin-bottom:-35px;
+word-wrap:break-word;
+line-height:23px;
+max-width:442px;
+overflow:hidden;
+}
+#errortextsecondline {
+height:28px;
+overflow:hidden;
+word-wrap:break-word;
+max-width:450px;
+}
