@@ -204,8 +204,8 @@ top:5px;
 }
 #errortextfirstline {
 min-height:28px;
-height:28px;
-max-height:28px;
+height:fit-content;
+max-height:180px;
 margin-bottom:-35px;
 word-wrap:break-word;
 line-height:23px;
