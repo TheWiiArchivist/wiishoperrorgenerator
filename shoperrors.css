@@ -149,7 +149,7 @@ transition:0s;
 }
 #extradotsonbordersbottom {
   position:absolute;
-  top:303px;
+  top:320px;
 }
 body {
   background-color:#e6f8ff;
@@ -180,7 +180,7 @@ body {
   overflow:hidden;
   height: 23px;
   position:absolute;
-  top:303px;
+  top:320px;
 }
 
 .warningRed {
