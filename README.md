@@ -1,0 +1,1 @@
+I may have made the website, but i didnt make the concept, this was inspired by <a href="https://limes.pink/errors">https://limes.pink/errors</a>, a website that allows you to make wii, wii u, and 3DS ui errors!
